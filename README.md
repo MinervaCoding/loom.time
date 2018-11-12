@@ -1,2 +1,2 @@
-# Bloom.time
+# loom.time
 Zeiterfassung im Rahmen der loom Datenbank.

@@ -1,1 +1,2 @@
-# zeitig2.0
+# Bloom.time
+Zeiterfassung im Rahmen der loom Datenbank.

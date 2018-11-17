@@ -41,6 +41,13 @@
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
   </PropertyGroup>
+	<PropertyGroup Condition=" '$(OS)' == 'Unix' ">
+	    <MonoAndroidBinDirectory>/usr/lib/mono/xamarin-android/bin</MonoAndroidBinDirectory>
+	    <AndroidSdkDirectory>$(ANDROID_SDK_PATH)</AndroidSdkDirectory>
+	    <AndroidNdkDirectory>$(ANDROID_NDK_PATH)</AndroidNdkDirectory>
+
+	    <TargetFrameworkRootPath>/usr/lib/mono/xbuild-frameworks/</TargetFrameworkRootPath>
+	</PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
     <Reference Include="System" />

@@ -1,16 +1,24 @@
 ﻿using System;
-using Gtk;
+using System.Net;
+using Xamarin.Forms;
+using Xamarin.Forms.Platform.GTK;
 
 namespace loom.time.GTK
 {
     class MainClass
     {
-        public static void Main(string[] args)
+        [STAThread]
+        static void Main(string[] args)
         {
-            Application.Init();
-            MainWindow win = new MainWindow();
-            win.Show();
-            Application.Run();
+//            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
+            Gtk.Application.Init();
+            Forms.Init();
+            var app = new App();
+            var window = new FormsWindow();
+            window.LoadApplication(app);
+            window.SetApplicationTitle("loom.time");
+            window.Show();
+            Gtk.Application.Run();
         }
     }
 }

@@ -5,18 +5,18 @@ using SQLiteNetExtensions.Attributes;
 
 namespace loom.time.Models
 {
-    public class Vorgang
+    public class Stammdaten
     {
         [PrimaryKey]
-        public int VorgangNr { get; set; }
+        public int PersonalNr { get; set; }
 
-        public string ProjektElementBeschreibung { get; set; }
+        public string Vorname { get; set; }
 
-        public string Projekt { get; set; }
+        public string Name { get; set; }
 
-        public int Status { get; set; }
+        public string Abteilung { get; set; }
 
-        public string ProzessElementBeschreibung { get; set; }
+        public int AbteilungsNr { get; set; }
 
         [OneToMany(CascadeOperations = CascadeOperation.All)]      // One to many relationship with Valuation
         public List<Leistung> Leistungen { get; set; }

@@ -22,25 +22,4 @@
   <ItemGroup>
     <Compile Remove="Model\EmptyClass.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <WebReferences Include="Web References" />
-  </ItemGroup>
-  <ItemGroup>
-    <WebReferenceUrl Include="https://www.w3schools.com/xml/tempconvert.asmx?WSDL">
-      <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\www.w3schools.com</RelPath>
-      <UpdateFromURL>https://www.w3schools.com/xml/tempconvert.asmx?WSDL</UpdateFromURL>
-    </WebReferenceUrl>
-  </ItemGroup>
-  <ItemGroup>
-    <None Update="Web References\www.w3schools.com\Reference.map">
-      <Generator>MSDiscoCodeGenerator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Update="Web References\www.w3schools.com\Reference.cs">
-      <DependentUpon>Reference.map</DependentUpon>
-    </Compile>
-  </ItemGroup>
 </Project>

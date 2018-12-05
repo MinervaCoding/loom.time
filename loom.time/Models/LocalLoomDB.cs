@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using SQLite;
 
-namespace loom.time.Models
+namespace loom.time
 {
     public class LocalLoomDB : SQLiteConnection
     {
@@ -16,33 +16,42 @@ namespace loom.time.Models
             get
             {
                 var sqliteFilename = "local_loom.db3";
+                    
+                #if NETFX_CORE
+                var path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, sqliteFilename);
+                #else
 
-#if NETFX_CORE
-                    var path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, sqliteFilename);
-#else
+                #if SILVERLIGHT
+                // Windows Phone expects a local path, not absolut
+                var path = sqliteFilename;
+                #else
 
-#if SILVERLIGHT
-                    // Windows Phone expects a local path, not absolut
-                    var path = sqliteFilename;
-#else
+                #if __ANDROID__
+                // Just use whatever directory SpecialFolder.Personal returns
+                string libraryPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
 
-#if __ANDROID__
-                    // Just use whatever directory SpecialFolder.Personal returns
-                    string libraryPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+                #else
 
-#else
+                #if __IOS__
                 // we need to put in /Library/ on iOS5.1 to meet Apple's iCloud terms
                 // (they don't want non-user-generated data in Documents)
                 string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal); // Documents folder
                 string libraryPath = Path.Combine(documentsPath, "../Library/"); // Library folder
+                #else
+
+                // UNIX
+                // for now we place the DB in the main users folder so that we don't have to
+                // create a sub folder here. Should be added later if a desktop app is designed.
+                string libraryPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal); // main user folder
+#endif
 
 #endif
 
                 var path = Path.Combine(libraryPath, sqliteFilename);
 
-#endif
+                #endif
 
-#endif
+                #endif
 
                 return path;
             }
@@ -53,6 +62,7 @@ namespace loom.time.Models
             // create the tables
             CreateTable<Leistung>();
             CreateTable<Vorgang>();
+            CreateTable<Stammdaten>();
         }
 
 

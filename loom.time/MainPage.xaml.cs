@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using SQLite;
+
 
 namespace loom.time
 {
@@ -12,6 +14,10 @@ namespace loom.time
         public MainPage()
         {
             InitializeComponent();
+
+            // creating the db for testing purpose. should be placed in a controller
+            var db = new LocalLoomDB(LocalLoomDB.DatabaseFilePath);
+
         }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using SQLite;
 using SQLiteNetExtensions.Attributes;
 
-namespace loom.time.Models
+namespace loom.time
 {
     public class Vorgang
     {

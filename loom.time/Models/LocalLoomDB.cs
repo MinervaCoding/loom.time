@@ -66,51 +66,130 @@ namespace loom.time
         }
 
 
-        //public IEnumerable<Stock> GetStocks()
-        //{
-        //    lock (locker)
-        //    {
-        //        return (from i in Table<Stock>() select i).ToList();
-        //    }
-        //}
+        public IEnumerable<Leistung> GetLeistungen()
+        {
+            lock (locker)
+            {
+                return (from i in Table<Leistung>() select i).ToList();
+            }
+        }
 
-        //public Stock GetStock(int id)
-        //{
-        //    lock (locker)
-        //    {
-        //        return Table<Stock>().FirstOrDefault(x => x.Id == id);
-        //    }
-        //}
+        public Leistung GetLeistung(int id)
+        {
+            lock (locker)
+            {
+                return Table<Leistung>().FirstOrDefault(x => x.LocalLeistungsNr == id);
+            }
+        }
 
-        //public int SaveStock(Stock item)
-        //{
-        //    lock (locker)
-        //    {
-        //        if (item.Id != 0)
-        //        {
-        //            Update(item);
-        //            return item.Id;
-        //        }
-        //        else
-        //        {
-        //            return Insert(item);
-        //        }
-        //    }
-        //}
+        public int SaveLeistung(Leistung item)
+        {
+            lock (locker)
+            {
+                if (item.LocalLeistungsNr != 0)
+                {
+                    Update(item);
+                    return item.LocalLeistungsNr;
+                }
+                else
+                {
+                    return Insert(item);
+                }
+            }
+        }
 
-        //      public int DeleteStock(int id) 
-        //      {
-        //          lock (locker) {
-        //              return Delete<Stock> (new Stock () { Id = id });
-        //          }
-        //      }
-        //public int DeleteStock(Stock stock)
-        //{
-        //    lock (locker)
-        //    {
-        //        return Delete<Stock>(stock.Id);
-        //    }
-        //}
+        public int DeleteLeistung(int id) 
+        {
+            lock (locker) {
+                return Delete<Leistung> (new Leistung () { LocalLeistungsNr = id });
+            }
+        }
+
+        public int DeleteLeistung(Leistung item)
+        {
+            lock (locker)
+            {
+                return Delete<Leistung>(item.LocalLeistungsNr);
+            }
+        }
+
+        public IEnumerable<Vorgang> GetVorgaenge()
+        {
+            lock (locker)
+            {
+                return (from i in Table<Vorgang>() select i).ToList();
+            }
+        }
+
+        public Leistung GetVorgang(int id)
+        {
+            lock (locker)
+            {
+                return Table<Vorgang>().FirstOrDefault(x => x.VorgangNr == id);
+            }
+        }
+
+        public int SaveVorgang(Vorgang item)
+        {
+            lock (locker)
+            {
+                if (item.VorgangNr != 0)
+                {
+                    Update(item);
+                    return item.VorgangNr;
+                }
+                else
+                {
+                    return Insert(item);
+                }
+            }
+        }
+
+        public int DeleteVorgang(int id)
+        {
+            lock (locker)
+            {
+                return Delete<Vorgang>(new Vorgang() { VorgangNr = id });
+            }
+        }
+
+        public int DeleteVorgang(Vorgang item)
+        {
+            lock (locker)
+            {
+                return Delete<Vorgang>(item.VorgangNr);
+            }
+        }
+
+        public Stammdaten GetStammdaten()
+        {
+            lock (locker)
+            {
+                return Table<Stammdaten>().First();
+            }
+        }
+
+        public int SaveStammdaten(Stammdaten item)
+        {
+            lock (locker)
+            {
+                if (item.PersonalNr != 0)
+                {
+                    Update(item);
+                    return item.PersonalNr;
+                }
+                else
+                {
+                    return Insert(item);
+                }
+            }
+        }
+
+        public int sync_to_remote_server()
+        {
+            // code to be added
+            // will return the number of modified lines
+        }
     }
 
 }

@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using SQLite;
-using SQLiteNetExtensions.Attributes;
 
 namespace loom.time.models
 {
     public class Vorgang
     {
-        [PrimaryKey]
         public int VorgangNr { get; set; }
 
         public string ProjektElementBeschreibung { get; set; }
@@ -18,7 +15,6 @@ namespace loom.time.models
 
         public string ProzessElementBeschreibung { get; set; }
 
-        [OneToMany(CascadeOperations = CascadeOperation.All)]      // One to many relationship with Valuation
         public List<Leistung> Leistungen { get; set; }
 
     }

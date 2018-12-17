@@ -4,6 +4,8 @@ using System.IO;
 using System.Linq;
 using SQLite;
 
+using loom.time.models;
+
 namespace loom.time
 {
     public class LocalLoomDB : SQLiteConnection
@@ -113,6 +115,14 @@ namespace loom.time
             }
         }
 
+        public int SaveLeistungenToDB()
+        {
+            return 0;
+            //CODE TO BE ADDED
+        }
+
+
+
         public IEnumerable<Vorgang> GetVorgaenge()
         {
             lock (locker)
@@ -121,13 +131,21 @@ namespace loom.time
             }
         }
 
-        public Leistung GetVorgang(int id)
+        public Vorgang GetVorgang(int id)
         {
             lock (locker)
             {
                 return Table<Vorgang>().FirstOrDefault(x => x.VorgangNr == id);
             }
         }
+
+        public int FetchVorgaengeFromDB()
+        {
+            //CODE TO BE ADDED
+            return 0; 
+        }
+
+        /* Vorgang should be read-only on this end
 
         public int SaveVorgang(Vorgang item)
         {
@@ -160,36 +178,33 @@ namespace loom.time
                 return Delete<Vorgang>(item.VorgangNr);
             }
         }
+        */
 
+        
         public Stammdaten GetStammdaten()
         {
             lock (locker)
             {
-                return Table<Stammdaten>().First();
+                // FirstOrDefault will return 0 if not Stamdaten is set
+                return Table<Stammdaten>().FirstOrDefault();
+
             }
         }
 
-        public int SaveStammdaten(Stammdaten item)
+        public int SetStammdaten(int PersonalNr)
         {
             lock (locker)
             {
-                if (item.PersonalNr != 0)
+                if (Table<Stammdaten>().Count() > 0)
                 {
-                    Update(item);
-                    return item.PersonalNr;
+                    Delete<Stammdaten>(Table<Stammdaten>().First().PersonalNr);
                 }
                 else
                 {
-                    return Insert(item);
+
+                }
+                return 0;
                 }
             }
         }
-
-        public int sync_to_remote_server()
-        {
-            // code to be added
-            // will return the number of modified lines
-        }
     }
-
-}

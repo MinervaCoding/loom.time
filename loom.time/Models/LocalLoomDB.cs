@@ -4,6 +4,9 @@ using System.IO;
 using System.Linq;
 using SQLite;
 
+using System.Data;
+using System.Data.SqlClient;
+
 using loom.time.models;
 
 namespace loom.time
@@ -18,28 +21,28 @@ namespace loom.time
             get
             {
                 var sqliteFilename = "local_loom.db3";
-                    
-                #if NETFX_CORE
-                var path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, sqliteFilename);
-                #else
 
-                #if SILVERLIGHT
+#if NETFX_CORE
+                var path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, sqliteFilename);
+#else
+
+#if SILVERLIGHT
                 // Windows Phone expects a local path, not absolut
                 var path = sqliteFilename;
-                #else
+#else
 
-                #if __ANDROID__
+#if __ANDROID__
                 // Just use whatever directory SpecialFolder.Personal returns
                 string libraryPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
 
-                #else
+#else
 
-                #if __IOS__
+#if __IOS__
                 // we need to put in /Library/ on iOS5.1 to meet Apple's iCloud terms
                 // (they don't want non-user-generated data in Documents)
                 string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal); // Documents folder
                 string libraryPath = Path.Combine(documentsPath, "../Library/"); // Library folder
-                #else
+#else
 
                 // UNIX
                 // for now we place the DB in the main users folder so that we don't have to
@@ -51,9 +54,9 @@ namespace loom.time
 
                 var path = Path.Combine(libraryPath, sqliteFilename);
 
-                #endif
+#endif
 
-                #endif
+#endif
 
                 return path;
             }
@@ -62,36 +65,36 @@ namespace loom.time
         public LocalLoomDB(string path) : base(path)
         {
             // create the tables
-            CreateTable<Leistung>();
-            CreateTable<Vorgang>();
-            CreateTable<Stammdaten>();
+            CreateTable<Performance>();
+            CreateTable<Activity>();
+            CreateTable<MasterData>();
         }
 
 
-        public IEnumerable<Leistung> GetLeistungen()
+        public IEnumerable<Performance> GetPerformances()
         {
             lock (locker)
             {
-                return (from i in Table<Leistung>() select i).ToList();
+                return (from i in Table<Performance>() select i).ToList();
             }
         }
 
-        public Leistung GetLeistung(int id)
+        public Performance GetPerformance(int id)
         {
             lock (locker)
             {
-                return Table<Leistung>().FirstOrDefault(x => x.LocalLeistungsNr == id);
+                return Table<Performance>().FirstOrDefault(x => x.LocalPerformanceID == id);
             }
         }
 
-        public int SaveLeistung(Leistung item)
+        public int SavePerformance(Performance item)
         {
             lock (locker)
             {
-                if (item.LocalLeistungsNr != 0)
+                if (item.LocalPerformanceID != 0)
                 {
                     Update(item);
-                    return item.LocalLeistungsNr;
+                    return item.LocalPerformanceID;
                 }
                 else
                 {
@@ -100,111 +103,78 @@ namespace loom.time
             }
         }
 
-        public int DeleteLeistung(int id) 
-        {
-            lock (locker) {
-                return Delete<Leistung> (new Leistung () { LocalLeistungsNr = id });
-            }
-        }
-
-        public int DeleteLeistung(Leistung item)
+        public int DeletePerformance(int id)
         {
             lock (locker)
             {
-                return Delete<Leistung>(item.LocalLeistungsNr);
+                return Delete<Performance>(new Performance() { LocalPerformanceID = id });
             }
         }
 
-        public int SaveLeistungenToDB()
-        {
-            return 0;
-            //CODE TO BE ADDED
-        }
-
-
-
-        public IEnumerable<Vorgang> GetVorgaenge()
+        public int DeletePerformance(Performance item)
         {
             lock (locker)
             {
-                return (from i in Table<Vorgang>() select i).ToList();
+                return Delete<Performance>(item.LocalPerformanceID);
             }
         }
 
-        public Vorgang GetVorgang(int id)
+
+        public IEnumerable<Activity> GetActivities()
         {
             lock (locker)
             {
-                return Table<Vorgang>().FirstOrDefault(x => x.VorgangNr == id);
+                return (from i in Table<Activity>() select i).ToList();
             }
         }
 
-        public int FetchVorgaengeFromDB()
-        {
-            //CODE TO BE ADDED
-            return 0; 
-        }
-
-        /* Vorgang should be read-only on this end
-
-        public int SaveVorgang(Vorgang item)
+        public Activity GetActivity(int id)
         {
             lock (locker)
             {
-                if (item.VorgangNr != 0)
-                {
-                    Update(item);
-                    return item.VorgangNr;
-                }
-                else
-                {
-                    return Insert(item);
-                }
+                return Table<Activity>().FirstOrDefault(x => x.ActivityID == id);
             }
         }
 
-        public int DeleteVorgang(int id)
-        {
-            lock (locker)
-            {
-                return Delete<Vorgang>(new Vorgang() { VorgangNr = id });
-            }
-        }
-
-        public int DeleteVorgang(Vorgang item)
-        {
-            lock (locker)
-            {
-                return Delete<Vorgang>(item.VorgangNr);
-            }
-        }
-        */
-
-        
-        public Stammdaten GetStammdaten()
+        public MasterData GetMasterData()
         {
             lock (locker)
             {
                 // FirstOrDefault will return 0 if not Stamdaten is set
-                return Table<Stammdaten>().FirstOrDefault();
+                return Table<MasterData>().FirstOrDefault();
 
             }
         }
 
-        public int SetStammdaten(int PersonalNr)
+        public int VerifyMasterDataWithDB(int StaffID)
         {
+
             lock (locker)
             {
-                if (Table<Stammdaten>().Count() > 0)
+                if (Table<MasterData>().Count() > 0)
                 {
-                    Delete<Stammdaten>(Table<Stammdaten>().First().PersonalNr);
+                    Delete<MasterData>(Table<MasterData>().First().StaffID);
                 }
                 else
                 {
 
                 }
                 return 0;
-                }
             }
         }
+
+
+        public int FetchActivitiesFromDB()
+        {
+            //CODE TO BE ADDED
+            return 0;
+        }
+
+        public int SyncToDB()
+        {
+            //CODE TO BE ADDED
+            return 0;
+        }
+
     }
+}

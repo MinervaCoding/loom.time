@@ -22,4 +22,10 @@
   <ItemGroup>
     <Compile Remove="Model\EmptyClass.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\dummy.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="UserLogin.xaml" />
+  </ItemGroup>
 </Project>

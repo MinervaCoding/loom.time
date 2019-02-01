@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:loom.time" 
+             x:Class="loom.time.UserLogin">
+   
+    
+    <StackLayout Spacing="00" x:Name="LayoutUserLogin">
+        <!-- Place new controls here -->
+
+    
+        <Button x:Name="UserLoginButton"
+                Text="LoginUser"
+                FontSize="Large"
+                Margin="0,100,10,0"
+                HorizontalOptions="Center"
+                Pressed="PressMeButton_Pressed"
+                Clicked="PressMeButton_Clicked"/>
+    
+        <Entry 
+            Placeholder="Enter staff number"
+            HorizontalOptions="Center"/>
+            
+
+        
+    </StackLayout>
+</ContentPage>

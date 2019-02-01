@@ -7,9 +7,9 @@ using Xamarin.Forms;
 
 namespace loom.time
 {
-    public partial class MainPage : ContentPage
+    public partial class UserLogin : ContentPage
     {
-        public MainPage()
+        public UserLogin()
         {
             InitializeComponent();
         }

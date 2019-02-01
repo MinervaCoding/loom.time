@@ -11,7 +11,7 @@ namespace loom.time
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new UserLogin();
         }
 
         protected override void OnStart()

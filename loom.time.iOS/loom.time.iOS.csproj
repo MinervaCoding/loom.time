@@ -157,4 +157,12 @@
       <Name>loom.time</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\date.png" />
+    <BundleResource Include="Resources\date%402x.png" />
+    <BundleResource Include="Resources\login.png" />
+    <BundleResource Include="Resources\login%402x.png" />
+    <BundleResource Include="Resources\tap.png" />
+    <BundleResource Include="Resources\tap%402x.png" />
+  </ItemGroup>
 </Project>

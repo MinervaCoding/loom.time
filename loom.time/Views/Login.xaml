@@ -6,11 +6,12 @@
              Title="Login">
     
     <ContentPage.Content>
-        
+         
     <FlexLayout Direction="Column"
                 AlignItems="Center"
                 JustifyContent="Start">
-        
+            
+            
             <Label Text="User"
                    Font="Verdana"
                    FontSize="40"
@@ -19,7 +20,7 @@
                    VerticalOptions="Start" />
             
 
-            <Entry Placeholder="Enter Stuff Number"
+            <Entry Placeholder="Enter Staff Number"
                    FontFamily="Verdana"
                    WidthRequest="250"
                    HeightRequest="50"

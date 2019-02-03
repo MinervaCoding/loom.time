@@ -73,8 +73,8 @@
     <ConsolePause>False</ConsolePause>
     <MtouchArch>ARM64</MtouchArch>
     <BuildIpa>True</BuildIpa>
-    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
-    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignProvision>iOS Team Provisioning Profile: MinervaCoding.loom-time</CodesignProvision>
+    <CodesignKey>iPhone Developer: jakob.huber@eclipso.de (U7QN873Z5H)</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
@@ -164,5 +164,8 @@
     <BundleResource Include="Resources\login%402x.png" />
     <BundleResource Include="Resources\tap.png" />
     <BundleResource Include="Resources\tap%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\background.jpg" />
   </ItemGroup>
 </Project>

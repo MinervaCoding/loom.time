@@ -4,8 +4,30 @@
              x:Class="loom.time.Views.Date"  
              Icon="date.png"
              Title="Date">
-    <ContentPage.Content>
-    
+
+        <ContentPage.Content>
+        
+            <FlexLayout 
+                Direction="Column"
+                AlignItems="Center"
+                JustifyContent="Start">
+          
+            <Label  
+                Text="Pick Date"
+                Font="Verdana"
+                FontSize="40"
+                HorizontalOptions="Center"
+                VerticalOptions="Start"
+                Margin="0,60,0,0"/>
+       
+            <DatePicker 
+                FontFamily="Verdana"
+                FontSize="Large"
+                HorizontalOptions="Center"
+                VerticalOptions="Start"
+                Margin="0,10,0,0"/>
+            
+           </FlexLayout>
         
     </ContentPage.Content>
 </ContentPage>

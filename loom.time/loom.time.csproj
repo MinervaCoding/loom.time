@@ -23,6 +23,7 @@
   <ItemGroup>
     <Compile Remove="Model\EmptyClass.cs" />
     <Compile Remove="Views\Today.xaml.cs" />
+    <Compile Remove="Views\GeneralViewCS.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\dummy.txt" />
@@ -30,9 +31,14 @@
     <None Remove="Ressources\TimaAndPerfomance.png" />
     <None Remove="Ressources\date.png" />
     <None Remove="Ressources\timaandperfomance.png" />
+    <None Remove="Ressources\peri_logo.png" />
+    <None Remove="ViewModels\dummy.txt" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="UserLogin.xaml" />
     <EmbeddedResource Remove="Views\Today.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Ressources\peri_logo.png" />
   </ItemGroup>
 </Project>

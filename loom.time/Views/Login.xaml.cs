@@ -10,6 +10,11 @@ namespace loom.time.Views
         public Login()
         {
             InitializeComponent();
+
+            var MyEntry = new Entry { };
+
         }
+
     }
 }
+

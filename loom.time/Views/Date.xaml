@@ -5,10 +5,7 @@
              Icon="date.png"
              Title="Date">
     <ContentPage.Content>
-        <StackLayout>
-            <Label  Text="Date go here" 
-                    HorizontalOptions="Center" 
-                    VerticalOptions="CenterAndExpand" />
-        </StackLayout>
+    
+        
     </ContentPage.Content>
 </ContentPage>

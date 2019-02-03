@@ -1,0 +1,6 @@
+﻿
+// PERI Colors   White   #FFFFFF
+//              Gelb    #FF8C1A
+//              Rot 1   #8A1214
+//              Rot 2   #CC241C
+//              Grün    #4FA833

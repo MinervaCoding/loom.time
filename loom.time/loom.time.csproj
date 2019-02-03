@@ -21,11 +21,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Model\EmptyClass.cs" />
+    <Compile Remove="Views\Today.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\dummy.txt" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="UserLogin.xaml" />
+    <EmbeddedResource Remove="Views\Today.xaml" />
   </ItemGroup>
 </Project>

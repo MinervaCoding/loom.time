@@ -24,6 +24,9 @@
     <Compile Remove="Model\EmptyClass.cs" />
     <Compile Remove="Views\Today.xaml.cs" />
     <Compile Remove="Views\GeneralViewCS.cs" />
+    <Compile Remove="ViewModels\ViewModelsCS.cs" />
+    <Compile Remove="ViewModels\Login.cs" />
+    <Compile Remove="ViewModels\ViewModelsCS.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\dummy.txt" />

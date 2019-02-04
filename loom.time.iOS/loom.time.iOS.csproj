@@ -140,6 +140,7 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Image.imageset\Contents.json" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -164,8 +165,6 @@
     <BundleResource Include="Resources\login%402x.png" />
     <BundleResource Include="Resources\tap.png" />
     <BundleResource Include="Resources\tap%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\background.jpg" />
+    <BundleResource Include="Resources\background.jpg" />
   </ItemGroup>
 </Project>

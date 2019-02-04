@@ -9,6 +9,7 @@ namespace loom.time.Views
     {
         public TimeAndPerfomance()
         {
+            BackgroundImage = "background.jpg";
             InitializeComponent();
         }
     }

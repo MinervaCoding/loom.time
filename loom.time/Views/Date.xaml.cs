@@ -9,6 +9,7 @@ namespace loom.time.Views
     {
         public Date()
         {
+            BackgroundImage = "background.jpg";
             InitializeComponent();
         }
     }

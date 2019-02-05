@@ -5,7 +5,11 @@ namespace loom.time.ViewModels
 
     { 
     
-    public int LoginNr { get; set; }
+    
+        public int LoginNr { get; set; }
+        public string StaffName { get; set; }
+
+
 
         public bool SetLogin(double NEWLoginNr)
         {
@@ -18,6 +22,14 @@ namespace loom.time.ViewModels
                 LoginNr = Convert.ToInt32(NEWLoginNr) + 1;
 
                 //Hier checken Stammdaten bekommen, dann rückgabe True
+
+                Models.Stammdaten stammdaten = new Models.Stammdaten();
+
+                //hier if statement stammdaten.PersonalNr is nothing then, else return false
+
+                stammdaten.PersonalNr = LoginNr;
+                StaffName = stammdaten.Name + ", " + stammdaten.Vorname;
+
 
                 return true;
             }

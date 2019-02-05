@@ -11,7 +11,7 @@ namespace loom.time
         {
             InitializeComponent();
 
-            MainPage = new Views.MainPage();
+            MainPage = new Views.MainTabbedPage();
         }
 
         protected override void OnStart()

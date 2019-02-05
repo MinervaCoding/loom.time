@@ -4,3 +4,8 @@
 //              Rot 1   #8A1214
 //              Rot 2   #CC241C
 //              Grün    #4FA833
+
+
+    <local:Login />
+    <local:Date />
+    <local:TimeAndPerfomance />

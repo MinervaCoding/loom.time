@@ -12,5 +12,7 @@ namespace loom.time.Views
             BackgroundImage = "background.jpg";
             InitializeComponent();
         }
+
+
     }
 }

@@ -2,11 +2,11 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:local="clr-namespace:loom.time.Views" 
-             x:Class="loom.time.Views.MainPage">
+             x:Class="loom.time.Views.MainTabbedPage">
    
-    
-    <local:Login />
-    <local:Date />
-    <local:TimeAndPerfomance />
+
+        <local:Login /> 
+        <local:Date />
+        <local:TimeAndPerfomance />
 
 </TabbedPage>

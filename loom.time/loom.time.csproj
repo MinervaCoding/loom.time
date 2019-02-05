@@ -27,6 +27,7 @@
     <Compile Remove="ViewModels\ViewModelsCS.cs" />
     <Compile Remove="ViewModels\Login.cs" />
     <Compile Remove="ViewModels\ViewModelsCS.cs" />
+    <Compile Remove="Views\MainTabbedPageCS.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\dummy.txt" />

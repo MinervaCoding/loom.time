@@ -7,12 +7,15 @@ using Xamarin.Forms;
 
 namespace loom.time.Views
 {
-    public partial class MainPage : TabbedPage
-    {
-        public MainPage()
+    public partial class MainTabbedPage : TabbedPage
+    {   
+
+        public MainTabbedPage()
         {
             InitializeComponent();
+
         }
+
     }
 }
 

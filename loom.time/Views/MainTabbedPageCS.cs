@@ -1,19 +1,35 @@
-﻿using Xamarin.Forms;
+﻿using System;
+using Xamarin.Forms;
 
 namespace loom.time.Views
 {
-    public class MainPageCS : TabbedPage
-    {
-        public MainPageCS()
-        {
+	public class MainTabbedPageCS : ContentPage
+	{
+		public MainTabbedPageCS ()
+		{
+			var toolbarItem = new ToolbarItem {
+				Text = "Logout"
+			};
+			toolbarItem.Clicked += OnLogoutButtonClicked;
+			ToolbarItems.Add (toolbarItem);
 
-            // Children.Add(new Login());
-            // Children.Add(new Date());
-            // Children.Add(new TimeAndPerfomance());
-        }
+			Title = "Main Page";
+			Content = new StackLayout { 
+				Children = {
+					new Label {
+						Text = "Main app content goes here",
+						HorizontalOptions = LayoutOptions.Center,
+						VerticalOptions = LayoutOptions.CenterAndExpand
+					}
+				}
+			};
+		}
 
-
-   
-    }
-
+		async void OnLogoutButtonClicked (object sender, EventArgs e)
+		{
+			App.IsUserLoggedIn = false;
+			Navigation.InsertPageBefore (new LoginPageCS (), this);
+			await Navigation.PopAsync ();
+		}
+	}
 }

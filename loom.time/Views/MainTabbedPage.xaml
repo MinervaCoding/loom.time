@@ -4,8 +4,11 @@
              xmlns:local="clr-namespace:loom.time.Views" 
              x:Class="loom.time.Views.MainTabbedPage">
    
-
-        <local:Login /> 
+        <TabbedPage.ToolbarItems>
+        <ToolbarItem Text="Logout" Clicked="OnLogoutButtonClicked" />
+        </TabbedPage.ToolbarItems>
+    
+    
         <local:Date />
         <local:TimeAndPerfomance />
 

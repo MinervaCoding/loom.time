@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="loom.time.LoginPage" 
+             x:Class="loom.time.Views.LoginPage" 
              Title="Login">
     
 	<ContentPage.ToolbarItems>
@@ -11,8 +11,10 @@
     
 	<ContentPage.Content>
         
-		<StackLayout VerticalOptions="StartAndExpand">           
-
+		<FlexLayout Direction="Column"
+                    AlignItems="Center"
+                    JustifyContent="Start">    
+            
             <Entry x:Name="EntryStaff"
                    Placeholder="Enter Staff Number"
                    FontFamily="Verdana"
@@ -50,7 +52,7 @@
                HeightRequest="50"/>
             
             
-		</StackLayout>
+		</FlexLayout>
 	</ContentPage.Content>
     
 </ContentPage>

@@ -30,6 +30,12 @@
     <Compile Remove="ViewModels\ViewModelsCS.cs" />
     <Compile Remove="App.xaml.cs" />
     <Compile Remove="MainPage.xaml.cs" />
+    <Compile Remove="LoginPageCS.cs" />
+    <Compile Remove="SignUpPageCS.cs" />
+    <Compile Remove="User.cs" />
+    <Compile Remove="Constants.cs" />
+    <Compile Remove="Views\Login.xaml.cs" />
+    <Compile Remove="SignUpPageCS.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\dummy.txt" />
@@ -46,9 +52,5 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Ressources\peri_logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="LoginPage.xaml" />
-    <None Include="SignUpPage.xaml" />
   </ItemGroup>
 </Project>

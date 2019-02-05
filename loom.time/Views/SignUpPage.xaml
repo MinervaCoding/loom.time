@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="loom.time.Views.SignUpPage"
+             Title="Sign Up">
+    
+    <ContentPage.Content>
+        
+        <FlexLayout Direction="Column"
+                    AlignItems="Center"
+                    JustifyContent="Start">  
+            
+            <Label Text="Staff ID"
+                   HorizontalOptions="Center"
+                   Font="Verdana"
+                   Margin="0,30,00,10"
+                   FontSize="Medium"
+                   BackgroundColor="White"
+                   WidthRequest="250"
+                   HeightRequest="30"/>
+            <Entry x:Name="staffid" 
+                   Placeholder="Enter StaffID"
+                   FontSize="Medium"
+                   HorizontalTextAlignment="Center"
+                   FontFamily="Verdana"
+                   WidthRequest="250"
+                   HeightRequest="30"
+                   Keyboard="Numeric"/>
+            
+            <Label Text="First Name"
+                   HorizontalOptions="Center"
+                   Font="Verdana"
+                   Margin="0,10,00,10"
+                   FontSize="Medium"                   
+                   BackgroundColor="White"
+                   WidthRequest="250"
+                   HeightRequest="30"/>
+            <Entry x:Name="firstname" 
+                   Placeholder="Enter First Name"
+                   FontSize="Medium"
+                   HorizontalTextAlignment="Center"
+                   FontFamily="Verdana"
+                   WidthRequest="250"
+                   HeightRequest="30"
+                   Keyboard="Text"/>
+            
+            <Label Text="Last Name"
+                   HorizontalOptions="Center"
+                   Font="Verdana"
+                   Margin="0,10,00,10"
+                   FontSize="Medium"                   
+                   BackgroundColor="White"
+                   WidthRequest="250"
+                   HeightRequest="30"/>
+            <Entry x:Name="lastname" 
+                   Placeholder="Enter Last Name"
+                   FontSize="Medium"
+                   HorizontalTextAlignment="Center"
+                   FontFamily="Verdana"
+                   WidthRequest="250"
+                   HeightRequest="30"
+                   Keyboard="Text"/>
+            
+            <Label Text="Department"
+                   HorizontalOptions="Center"
+                   Font="Verdana"
+                   Margin="0,10,00,10"
+                   FontSize="Medium"                   
+                   BackgroundColor="White"
+                   WidthRequest="250"
+                   HeightRequest="30"/>
+            <Entry x:Name="department" 
+                   Placeholder="Enter Department"
+                   FontSize="Medium"
+                   HorizontalTextAlignment="Center"
+                   FontFamily="Verdana"
+                   WidthRequest="250"
+                   HeightRequest="30"/>  
+            
+            <Label Text="Windows User"
+                   HorizontalOptions="Center"
+                   Font="Verdana"
+                   Margin="0,10,00,10"
+                   FontSize="Medium"                   
+                   BackgroundColor="White"
+                   WidthRequest="250"
+                   HeightRequest="30"/>
+            <Entry x:Name="windowsuser" 
+                   Placeholder="Enter Windows User"
+                   FontSize="Medium"
+                   HorizontalTextAlignment="Center"
+                   FontFamily="Verdana"
+                   WidthRequest="250"
+                   HeightRequest="30"
+                   Keyboard="Text"/>           
+
+            <Button x:Name="sign_up"
+                   Text="Send Request"
+                   Font="Verdana"
+                   TextColor="Black"
+                   WidthRequest="250"
+                   HeightRequest="50"
+                   FontSize="Large"
+                   Margin="0,20,0,0"
+                   BackgroundColor="White"
+                   BorderColor="#b2b2b2"
+                   BorderWidth="1"
+                   Pressed="OnSignUpButtonClicked"/>
+                  
+            
+        </FlexLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

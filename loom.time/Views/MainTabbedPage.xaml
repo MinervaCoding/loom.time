@@ -5,7 +5,8 @@
              x:Class="loom.time.Views.MainTabbedPage">
    
         <TabbedPage.ToolbarItems>
-        <ToolbarItem Text="Logout" Clicked="OnLogoutButtonClicked" />
+        <ToolbarItem Text="Logout" 
+                     Clicked="OnLogoutButtonClicked" />
         </TabbedPage.ToolbarItems>
     
     

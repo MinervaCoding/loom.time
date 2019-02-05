@@ -4,95 +4,126 @@
              x:Class="loom.time.Views.SignUpPage"
              Title="Sign Up">
     
-    <ContentPage.Content>
+    
+    <RelativeLayout Padding="0">   
+             
+            
+        <Image Aspect="AspectFill"
+               Source="background.jpg"
+               RelativeLayout.WidthConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+               RelativeLayout.HeightConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Height}">
+        </Image>
         
         <FlexLayout Direction="Column"
                     AlignItems="Center"
                     JustifyContent="Start">  
-            
+                   
             <Label Text="Staff ID"
-                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Start"
                    Font="Verdana"
-                   Margin="0,30,00,10"
+                   Margin="0,10,0,0"
                    FontSize="Medium"
                    BackgroundColor="White"
                    WidthRequest="250"
-                   HeightRequest="30"/>
+                   HeightRequest="65"/>
+            
             <Entry x:Name="staffid" 
                    Placeholder="Enter StaffID"
                    FontSize="Medium"
+                   Margin="0,-40,0,0"
                    HorizontalTextAlignment="Center"
                    FontFamily="Verdana"
-                   WidthRequest="250"
+                   WidthRequest="200"
                    HeightRequest="30"
                    Keyboard="Numeric"/>
-            
+             
             <Label Text="First Name"
-                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Start"
                    Font="Verdana"
-                   Margin="0,10,00,10"
+                   Margin="0,10,00,0"
                    FontSize="Medium"                   
                    BackgroundColor="White"
                    WidthRequest="250"
-                   HeightRequest="30"/>
+                   HeightRequest="65"/>
             <Entry x:Name="firstname" 
                    Placeholder="Enter First Name"
                    FontSize="Medium"
+                   Margin="0,-40,0,0"
                    HorizontalTextAlignment="Center"
                    FontFamily="Verdana"
-                   WidthRequest="250"
+                   WidthRequest="200"
                    HeightRequest="30"
                    Keyboard="Text"/>
             
             <Label Text="Last Name"
-                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Start"
                    Font="Verdana"
-                   Margin="0,10,00,10"
+                   Margin="0,10,0,0"
                    FontSize="Medium"                   
                    BackgroundColor="White"
                    WidthRequest="250"
-                   HeightRequest="30"/>
+                   HeightRequest="65"/>
             <Entry x:Name="lastname" 
                    Placeholder="Enter Last Name"
                    FontSize="Medium"
+                   Margin="0,-40,0,0"
                    HorizontalTextAlignment="Center"
                    FontFamily="Verdana"
-                   WidthRequest="250"
+                   WidthRequest="200"
                    HeightRequest="30"
                    Keyboard="Text"/>
             
             <Label Text="Department"
-                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Start"
                    Font="Verdana"
-                   Margin="0,10,00,10"
+                   Margin="0,10,0,0"
                    FontSize="Medium"                   
                    BackgroundColor="White"
                    WidthRequest="250"
-                   HeightRequest="30"/>
-            <Entry x:Name="department" 
-                   Placeholder="Enter Department"
-                   FontSize="Medium"
-                   HorizontalTextAlignment="Center"
-                   FontFamily="Verdana"
-                   WidthRequest="250"
-                   HeightRequest="30"/>  
+                   HeightRequest="65"/>
+            
+            <Picker x:Name="department"
+                    Title = "Select a department"
+                    HorizontalOptions="Center"
+                    Margin="0,-40,0,0"
+                    FontFamily="Verdana"
+                    WidthRequest="200"
+                    FontSize="Medium"
+                    HeightRequest="30">
+                    
+            </Picker>
             
             <Label Text="Windows User"
-                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Start"
                    Font="Verdana"
-                   Margin="0,10,00,10"
+                   Margin="0,10,0,0"
                    FontSize="Medium"                   
                    BackgroundColor="White"
                    WidthRequest="250"
-                   HeightRequest="30"/>
+                   HeightRequest="65"/>
             <Entry x:Name="windowsuser" 
                    Placeholder="Enter Windows User"
                    FontSize="Medium"
+                   Margin="0,-40,0,0"
                    HorizontalTextAlignment="Center"
                    FontFamily="Verdana"
-                   WidthRequest="250"
-                   HeightRequest="30"
-                   Keyboard="Text"/>           
+                   WidthRequest="200"
+                   HeightRequest="30">
+             
+                <Entry.Keyboard>
+                    <Keyboard x:FactoryMethod="Create">
+                        <x:Arguments>
+                            <KeyboardFlags>None</KeyboardFlags>
+                        </x:Arguments>
+                      </Keyboard>
+                  </Entry.Keyboard>
+
+            </Entry>           
 
             <Button x:Name="sign_up"
                    Text="Send Request"
@@ -109,6 +140,6 @@
                   
             
         </FlexLayout>
-    </ContentPage.Content>
+    </RelativeLayout>
     
 </ContentPage>

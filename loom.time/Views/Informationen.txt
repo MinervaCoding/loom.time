@@ -9,3 +9,16 @@
     <local:Login />
     <local:Date />
     <local:TimeAndPerfomance />
+    
+    
+     <ContentPage.BackgroundImage>
+    
+            <ImageBrush Stretch="None"
+                        ImageSource="background.jpg" 
+                        AlignmentY="Center" 
+                        AlignmentX="Center"/>
+        
+    </ContentPage.BackgroundImage>
+   
+   
+ 

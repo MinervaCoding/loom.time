@@ -8,7 +8,7 @@ namespace loom.time.Views
 		public LoginPage ()
 
 		{
-            BackgroundImage = "background.jpg";
+            //BackgroundImage = "background.jpg";
             InitializeComponent ();
 		}
 

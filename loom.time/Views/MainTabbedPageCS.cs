@@ -7,11 +7,19 @@ namespace loom.time.Views
 	{
 		public MainTabbedPageCS ()
 		{
-			var toolbarItem = new ToolbarItem {
+			
+            /*
+
+            Wird nicht benötigt, da nur einmalige anmeldung!          
+
+            var toolbarItem = new ToolbarItem {
 				Text = "Logout"
 			};
 			toolbarItem.Clicked += OnLogoutButtonClicked;
 			ToolbarItems.Add (toolbarItem);
+
+            */
+
 
 			Title = "Main Page";
 			Content = new StackLayout { 

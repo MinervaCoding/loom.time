@@ -36,6 +36,7 @@
     <Compile Remove="Constants.cs" />
     <Compile Remove="Views\Login.xaml.cs" />
     <Compile Remove="SignUpPageCS.cs" />
+    <Compile Remove="Views\MainTabbedPageCS.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\dummy.txt" />

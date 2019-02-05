@@ -9,7 +9,14 @@
                      Clicked="OnSignUpButtonClicked" />
 	</ContentPage.ToolbarItems>
     
-	<ContentPage.Content>
+    <RelativeLayout Padding="0">   
+             
+            
+        <Image Aspect="AspectFill"
+               Source="background.jpg"
+               RelativeLayout.WidthConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+               RelativeLayout.HeightConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Height}">
+        </Image>
         
 		<FlexLayout Direction="Column"
                     AlignItems="Center"
@@ -53,6 +60,6 @@
             
             
 		</FlexLayout>
-	</ContentPage.Content>
+	</RelativeLayout>
     
 </ContentPage>

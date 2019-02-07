@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using SQLite;
 using SQLiteNetExtensions.Attributes;
 
-namespace loom.webapi.models
+namespace loom.time.Models
 {
 
     public class ProjectElement {

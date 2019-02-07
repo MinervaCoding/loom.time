@@ -7,9 +7,8 @@ using SQLite;
 using System.Data;
 using System.Data.SqlClient;
 
-using loom.time.models;
 
-namespace loom.time
+namespace loom.time.Models
 {
     public class LocalLoomDB : SQLiteConnection
     {
@@ -65,11 +64,14 @@ namespace loom.time
         public LocalLoomDB(string path) : base(path)
         {
             // create the tables
-            CreateTable<Performance>();
+            CreateTable<Department>();
             CreateTable<Activity>();
-            CreateTable<MasterData>();
+            CreateTable<ProcessElement>();
+            CreateTable<ProcessPhase>();
+            CreateTable<ProjectElement>();
+            CreateTable<Staff>();
         }
-
+        /*
 
         public IEnumerable<Performance> GetPerformances()
         {
@@ -174,7 +176,7 @@ namespace loom.time
         {
             //CODE TO BE ADDED
             return 0;
-        }
+        }*/
 
     }
 }

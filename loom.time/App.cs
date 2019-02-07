@@ -8,6 +8,7 @@ namespace loom.time
 
 		public App ()
 		{
+
 			if (!IsUserLoggedIn) {
 				MainPage = new NavigationPage (new Views.LoginPage ());
 			} else {

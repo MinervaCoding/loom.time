@@ -9,8 +9,6 @@ namespace loom.time.ViewModels
         public int LoginNr { get; set; }
         public string StaffName { get; set; }
 
-
-
         public bool SetLogin(double NEWLoginNr)
         {
             //Checked ob Double = Integer

@@ -9,13 +9,13 @@ using System.Configuration;
 
 namespace loom.webapi.Controllers
 {
-    public class ActivityController : ApiController
+    public class ProcessPhaseController : ApiController
     {
         static LoomDB _db = new LoomDB(ConfigurationManager.AppSettings["LoomConnectionString"]);
         
-        public IEnumerable<Activity> GetAllActivities()
+        public IEnumerable<ProcessPhase> GetAllProcessPhases()
         {
-            return _db.Activity;
+            return _db.ProcessPhase;
         }      
     }
 }

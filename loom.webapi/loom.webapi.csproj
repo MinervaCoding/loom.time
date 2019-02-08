@@ -89,6 +89,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ProjectElementController.cs" />
+    <Compile Include="Controllers\ProcessElementController.cs" />
+    <Compile Include="Controllers\ProcessPhaseController.cs" />
+    <Compile Include="Controllers\DepartmentController.cs" />
+    <Compile Include="Controllers\StaffController.cs" />
     <Compile Include="Controllers\ActivityController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

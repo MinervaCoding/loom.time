@@ -301,7 +301,7 @@ public partial class Activity : System.ComponentModel.INotifyPropertyChanging, S
 	#region Children
 	[Association(Storage="_error", OtherKey="Activity", ThisKey="ActivityID", Name="ERROR_ACTIVITYERROR")]
 	[DebuggerNonUserCode()]
-	public EntitySet<Error> Error
+	internal EntitySet<Error> Error
 	{
 		get
 		{
@@ -315,7 +315,7 @@ public partial class Activity : System.ComponentModel.INotifyPropertyChanging, S
 	
 	[Association(Storage="_performance", OtherKey="Activity", ThisKey="ActivityID", Name="PERFORMANCE_ACTIVITYPERFORMANCE")]
 	[DebuggerNonUserCode()]
-	public EntitySet<Performance> Performance
+	internal EntitySet<Performance> Performance
 	{
 		get
 		{
@@ -329,7 +329,7 @@ public partial class Activity : System.ComponentModel.INotifyPropertyChanging, S
 	
 	[Association(Storage="_resourceAllocation", OtherKey="Activity", ThisKey="ActivityID", Name="RESOURCEALLOCATION_ACTIVITYRESOURCEALLOCATION")]
 	[DebuggerNonUserCode()]
-	public EntitySet<ResourceAllocation> ResourceAllocation
+	internal EntitySet<ResourceAllocation> ResourceAllocation
 	{
 		get
 		{
@@ -343,7 +343,7 @@ public partial class Activity : System.ComponentModel.INotifyPropertyChanging, S
 	
 	[Association(Storage="_partsListElement", OtherKey="Activity", ThisKey="ActivityID", Name="PARTSLISTELEMENT_ACTIVITYPARTSLISTELEMENT")]
 	[DebuggerNonUserCode()]
-	public EntitySet<PartsListElement> PartsListElement
+	internal EntitySet<PartsListElement> PartsListElement
 	{
 		get
 		{
@@ -359,7 +359,7 @@ public partial class Activity : System.ComponentModel.INotifyPropertyChanging, S
 	#region Parents
 	[Association(Storage="_complexityComplexity", OtherKey="ComplexityAbc", ThisKey="Complexity", Name="ACTIVITY_COMPLEXITYACTIVITY", IsForeignKey=true)]
 	[DebuggerNonUserCode()]
-	public Complexity ComplexityComplexity
+	internal Complexity ComplexityComplexity
 	{
 		get
 		{
@@ -392,7 +392,7 @@ public partial class Activity : System.ComponentModel.INotifyPropertyChanging, S
 	
 	[Association(Storage="_projectElementProjectElement", OtherKey="ProjectElementID", ThisKey="ProjectElement", Name="ACTIVITY_PROJECTELEMENTACTIVITY", IsForeignKey=true)]
 	[DebuggerNonUserCode()]
-	public ProjectElement ProjectElementProjectElement
+	internal ProjectElement ProjectElementProjectElement
 	{
 		get
 		{
@@ -425,7 +425,7 @@ public partial class Activity : System.ComponentModel.INotifyPropertyChanging, S
 	
 	[Association(Storage="_processElementProcessElement", OtherKey="ProcessElementID", ThisKey="ProcessElement", Name="ACTIVITY_PROCESSELEMENTACTIVITY", IsForeignKey=true)]
 	[DebuggerNonUserCode()]
-	public ProcessElement ProcessElementProcessElement
+	internal ProcessElement ProcessElementProcessElement
 	{
 		get
 		{

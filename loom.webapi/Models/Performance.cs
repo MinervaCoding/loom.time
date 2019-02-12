@@ -228,7 +228,7 @@ public partial class Performance : System.ComponentModel.INotifyPropertyChanging
 	#region Parents
 	[Association(Storage="_activityActivity", OtherKey="ActivityID", ThisKey="Activity", Name="PERFORMANCE_ACTIVITYPERFORMANCE", IsForeignKey=true)]
 	[DebuggerNonUserCode()]
-	public Activity ActivityActivity
+	internal Activity ActivityActivity
 	{
 		get
 		{
@@ -261,7 +261,7 @@ public partial class Performance : System.ComponentModel.INotifyPropertyChanging
 	
 	[Association(Storage="_staffStaff", OtherKey="StaffID", ThisKey="Staff", Name="PERFORMANCE_STAFFPERFORMANCE", IsForeignKey=true)]
 	[DebuggerNonUserCode()]
-	public Staff StaffStaff
+	internal Staff StaffStaff
 	{
 		get
 		{

@@ -18,11 +18,11 @@ namespace loom.webapi.Controllers
             return _db.Department;
         }
 
-        public Department GetDepartment(long DepartmentID)
+        public Department GetDepartment(long id)
         {
 
             var department = (from q in _db.Department
-                           where q.DepartmentID == DepartmentID
+                           where q.DepartmentID == id
                            select q).FirstOrDefault();
             if (department == null)
             {

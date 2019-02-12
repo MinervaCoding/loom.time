@@ -71,8 +71,7 @@ namespace loom.time.Models
             CreateTable<ProjectElement>();
             CreateTable<Staff>();
         }
-        /*
-
+        
         public IEnumerable<Performance> GetPerformances()
         {
             lock (locker)
@@ -85,7 +84,7 @@ namespace loom.time.Models
         {
             lock (locker)
             {
-                return Table<Performance>().FirstOrDefault(x => x.LocalPerformanceID == id);
+                return Table<Performance>().FirstOrDefault(x => x.PerformanceID == id);
             }
         }
 
@@ -93,10 +92,10 @@ namespace loom.time.Models
         {
             lock (locker)
             {
-                if (item.LocalPerformanceID != 0)
+                if (item.PerformanceID != 0)
                 {
                     Update(item);
-                    return item.LocalPerformanceID;
+                    return item.PerformanceID;
                 }
                 else
                 {
@@ -109,7 +108,7 @@ namespace loom.time.Models
         {
             lock (locker)
             {
-                return Delete<Performance>(new Performance() { LocalPerformanceID = id });
+                return Delete<Performance>(new Performance() { PerformanceID = id });
             }
         }
 
@@ -117,7 +116,7 @@ namespace loom.time.Models
         {
             lock (locker)
             {
-                return Delete<Performance>(item.LocalPerformanceID);
+                return Delete<Performance>(item.PerformanceID);
             }
         }
 
@@ -138,45 +137,16 @@ namespace loom.time.Models
             }
         }
 
-        public MasterData GetMasterData()
+        public Staff GetStaff(int id)
         {
             lock (locker)
             {
                 // FirstOrDefault will return 0 if not Stamdaten is set
-                return Table<MasterData>().FirstOrDefault();
+                return Table<Staff>().FirstOrDefault(x => x.StaffID == id);
 
             }
         }
 
-        public int VerifyMasterDataWithDB(int StaffID)
-        {
-
-            lock (locker)
-            {
-                if (Table<MasterData>().Count() > 0)
-                {
-                    Delete<MasterData>(Table<MasterData>().First().StaffID);
-                }
-                else
-                {
-
-                }
-                return 0;
-            }
-        }
-
-
-        public int FetchActivitiesFromDB()
-        {
-            //CODE TO BE ADDED
-            return 0;
-        }
-
-        public int SyncToDB()
-        {
-            //CODE TO BE ADDED
-            return 0;
-        }*/
-
+        
     }
 }

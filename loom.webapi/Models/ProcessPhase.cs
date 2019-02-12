@@ -86,7 +86,7 @@ public partial class ProcessPhase : System.ComponentModel.INotifyPropertyChangin
 	#region Children
 	[Association(Storage="_processElement", OtherKey="ProcessPhase", ThisKey="ProcessPhaseID", Name="PROCESSELEMENT_PROCESSPHASEPROCESSELEMENT")]
 	[DebuggerNonUserCode()]
-	public EntitySet<ProcessElement> ProcessElement
+	internal EntitySet<ProcessElement> ProcessElement
 	{
 		get
 		{

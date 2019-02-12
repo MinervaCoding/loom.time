@@ -13,12 +13,12 @@ namespace loom.webapi.Controllers
     {
         static LoomDB _db = new LoomDB(ConfigurationManager.AppSettings["LoomConnectionString"]);
 
-        public Staff GetStaff(long StafftID)
+        public Staff GetStaff(int id)
         {
 
             var staff = (from q in _db.Staff
-                              where q.StaffID == StafftID
-                              select q).FirstOrDefault();
+                         where q.StaffID == id
+                         select q).FirstOrDefault();
             if (staff == null)
             {
                 throw new HttpResponseException(
@@ -26,5 +26,9 @@ namespace loom.webapi.Controllers
             }
             return staff;
         }
+        public IEnumerable<Staff> GetAllStaff()
+        {
+            return _db.Staff;
+        }    
     }
 }

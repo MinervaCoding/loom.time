@@ -202,7 +202,7 @@ public partial class TargetTime : System.ComponentModel.INotifyPropertyChanging,
 	#region Parents
 	[Association(Storage="_quantityUnitQuantityUnit", OtherKey="QuantityUnitID", ThisKey="QuantityUnit", Name="TARGETTIME_QUANTITYUNITTARGETTIME", IsForeignKey=true)]
 	[DebuggerNonUserCode()]
-	public QuantityUnit QuantityUnitQuantityUnit
+	internal QuantityUnit QuantityUnitQuantityUnit
 	{
 		get
 		{
@@ -235,7 +235,7 @@ public partial class TargetTime : System.ComponentModel.INotifyPropertyChanging,
 	
 	[Association(Storage="_processElementProcessElement", OtherKey="ProcessElementID", ThisKey="ProcessElement", Name="TARGETTIME_PROCESSELEMENTTARGETTIME", IsForeignKey=true)]
 	[DebuggerNonUserCode()]
-	public ProcessElement ProcessElementProcessElement
+	internal ProcessElement ProcessElementProcessElement
 	{
 		get
 		{

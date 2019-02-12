@@ -228,7 +228,7 @@ public partial class ResourceAllocation : System.ComponentModel.INotifyPropertyC
 	#region Parents
 	[Association(Storage="_activityActivity", OtherKey="ActivityID", ThisKey="Activity", Name="RESOURCEALLOCATION_ACTIVITYRESOURCEALLOCATION", IsForeignKey=true)]
 	[DebuggerNonUserCode()]
-	public Activity ActivityActivity
+	internal Activity ActivityActivity
 	{
 		get
 		{
@@ -261,7 +261,7 @@ public partial class ResourceAllocation : System.ComponentModel.INotifyPropertyC
 	
 	[Association(Storage="_staffStaff", OtherKey="StaffID", ThisKey="Staff", Name="RESOURCEALLOCATION_STAFFRESOURCEALLOCATION", IsForeignKey=true)]
 	[DebuggerNonUserCode()]
-	public Staff StaffStaff
+	internal Staff StaffStaff
 	{
 		get
 		{

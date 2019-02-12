@@ -111,7 +111,7 @@ public partial class ProcessElementType : System.ComponentModel.INotifyPropertyC
 	#region Children
 	[Association(Storage="_processElement", OtherKey="ProcessElementType", ThisKey="ProcessElementTypeID", Name="PROCESSELEMENT_PROCESSELEMENTTYPEPROCESSELEMENT")]
 	[DebuggerNonUserCode()]
-	public EntitySet<ProcessElement> ProcessElement
+	internal EntitySet<ProcessElement> ProcessElement
 	{
 		get
 		{

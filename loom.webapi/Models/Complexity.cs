@@ -85,7 +85,7 @@ public partial class Complexity : System.ComponentModel.INotifyPropertyChanging,
 	#region Children
 	[Association(Storage="_activity", OtherKey="Complexity", ThisKey="ComplexityAbc", Name="ACTIVITY_COMPLEXITYACTIVITY")]
 	[DebuggerNonUserCode()]
-	public EntitySet<Activity> Activity
+	internal EntitySet<Activity> Activity
 	{
 		get
 		{

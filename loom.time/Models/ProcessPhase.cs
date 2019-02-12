@@ -9,12 +9,11 @@ namespace loom.time.Models
 
     public class ProcessPhase
     {
+        [PrimaryKey]
         public int ProcessPhaseID { get; set; }
 
         public string Description { get; set; }
 
-
-
     }
-	
-]}     
+
+}

@@ -202,7 +202,7 @@ public partial class PartsListElement : System.ComponentModel.INotifyPropertyCha
 	#region Parents
 	[Association(Storage="_activityActivity", OtherKey="ActivityID", ThisKey="Activity", Name="PARTSLISTELEMENT_ACTIVITYPARTSLISTELEMENT", IsForeignKey=true)]
 	[DebuggerNonUserCode()]
-	public Activity ActivityActivity
+	internal Activity ActivityActivity
 	{
 		get
 		{
@@ -235,7 +235,7 @@ public partial class PartsListElement : System.ComponentModel.INotifyPropertyCha
 	
 	[Association(Storage="_ppL", OtherKey="ArticleID", ThisKey="ArtikelID", Name="PARTSLISTELEMENT_PPLPARTSLISTELEMENT", IsForeignKey=true)]
 	[DebuggerNonUserCode()]
-	public PPL PPL
+	internal PPL PPL
 	{
 		get
 		{

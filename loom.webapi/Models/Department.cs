@@ -119,7 +119,7 @@ public partial class Department : System.ComponentModel.INotifyPropertyChanging,
 	#region Children
 	[Association(Storage="_holyDay", OtherKey="Department", ThisKey="DepartmentID", Name="HOLYDAY_DEPARTMENTHOLYDAY")]
 	[DebuggerNonUserCode()]
-	public EntitySet<Holyday> HolyDay
+	internal EntitySet<Holyday> HolyDay
 	{
 		get
 		{
@@ -133,7 +133,7 @@ public partial class Department : System.ComponentModel.INotifyPropertyChanging,
 	
 	[Association(Storage="_staff", OtherKey="Department", ThisKey="DepartmentID", Name="STAFF_DEPARTMENTSTAFF")]
 	[DebuggerNonUserCode()]
-	public EntitySet<Staff> Staff
+	internal EntitySet<Staff> Staff
 	{
 		get
 		{
@@ -147,7 +147,7 @@ public partial class Department : System.ComponentModel.INotifyPropertyChanging,
 	
 	[Association(Storage="_processElement", OtherKey="Department", ThisKey="DepartmentID", Name="PROCESSELEMENT_DEPARTMENTPROCESSELEMENT")]
 	[DebuggerNonUserCode()]
-	public EntitySet<ProcessElement> ProcessElement
+	internal EntitySet<ProcessElement> ProcessElement
 	{
 		get
 		{

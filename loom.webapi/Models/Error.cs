@@ -202,7 +202,7 @@ public partial class Error : System.ComponentModel.INotifyPropertyChanging, Syst
 	#region Parents
 	[Association(Storage="_activityActivity", OtherKey="ActivityID", ThisKey="Activity", Name="ERROR_ACTIVITYERROR", IsForeignKey=true)]
 	[DebuggerNonUserCode()]
-	public Activity ActivityActivity
+	internal Activity ActivityActivity
 	{
 		get
 		{
@@ -235,7 +235,7 @@ public partial class Error : System.ComponentModel.INotifyPropertyChanging, Syst
 	
 	[Association(Storage="_errorCodeErrorCode", OtherKey="ErrorCodeID", ThisKey="ErrorCode", Name="ERROR_ERRORCODEERROR", IsForeignKey=true)]
 	[DebuggerNonUserCode()]
-	public ErrorCode ErrorCodeErrorCode
+	internal ErrorCode ErrorCodeErrorCode
 	{
 		get
 		{

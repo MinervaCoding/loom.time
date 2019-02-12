@@ -146,7 +146,7 @@ public partial class ReferenceQuantity : System.ComponentModel.INotifyPropertyCh
 	#region Parents
 	[Association(Storage="_quantityUnitQuantityUnit", OtherKey="QuantityUnitID", ThisKey="QuantityUnit", Name="REFERENCEQUANTITY_QUANTITYUNITREFERENCEQUANTITY", IsForeignKey=true)]
 	[DebuggerNonUserCode()]
-	public QuantityUnit QuantityUnitQuantityUnit
+	internal QuantityUnit QuantityUnitQuantityUnit
 	{
 		get
 		{
@@ -179,7 +179,7 @@ public partial class ReferenceQuantity : System.ComponentModel.INotifyPropertyCh
 	
 	[Association(Storage="_projectElementProjectElement", OtherKey="ProjectElementID", ThisKey="ProjectElement", Name="REFERENCEQUANTITY_PROJECTELEMENTREFERENCEQUANTITY", IsForeignKey=true)]
 	[DebuggerNonUserCode()]
-	public ProjectElement ProjectElementProjectElement
+	internal ProjectElement ProjectElementProjectElement
 	{
 		get
 		{

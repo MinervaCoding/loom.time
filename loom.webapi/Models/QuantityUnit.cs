@@ -119,7 +119,7 @@ public partial class QuantityUnit : System.ComponentModel.INotifyPropertyChangin
 	#region Children
 	[Association(Storage="_targetTime", OtherKey="QuantityUnit", ThisKey="QuantityUnitID", Name="TARGETTIME_QUANTITYUNITTARGETTIME")]
 	[DebuggerNonUserCode()]
-	public EntitySet<TargetTime> TargetTime
+	internal EntitySet<TargetTime> TargetTime
 	{
 		get
 		{
@@ -133,7 +133,7 @@ public partial class QuantityUnit : System.ComponentModel.INotifyPropertyChangin
 	
 	[Association(Storage="_quantityUnitKey", OtherKey="QuantityUnit", ThisKey="QuantityUnitID", Name="QUANTITYUNITKEY_QUANTITYUNITQUANTITYUNITKEY")]
 	[DebuggerNonUserCode()]
-	public EntitySet<QuantityUnitKey> QuantityUnitKey
+	internal EntitySet<QuantityUnitKey> QuantityUnitKey
 	{
 		get
 		{
@@ -147,7 +147,7 @@ public partial class QuantityUnit : System.ComponentModel.INotifyPropertyChangin
 	
 	[Association(Storage="_referenceQuantity", OtherKey="QuantityUnit", ThisKey="QuantityUnitID", Name="REFERENCEQUANTITY_QUANTITYUNITREFERENCEQUANTITY")]
 	[DebuggerNonUserCode()]
-	public EntitySet<ReferenceQuantity> ReferenceQuantity
+	internal EntitySet<ReferenceQuantity> ReferenceQuantity
 	{
 		get
 		{

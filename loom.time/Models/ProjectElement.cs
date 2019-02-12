@@ -6,7 +6,8 @@ using SQLiteNetExtensions.Attributes;
 namespace loom.time.Models
 {
 
-    public class ProjectElement {
+    public class ProjectElement
+    {
 
         public string Comment { get; set; }
 
@@ -19,13 +20,13 @@ namespace loom.time.Models
 
         public string Description { get; set; }
 
-
-        public System.Nullable<int> PerEsponsible { get; set; }
+        [ForeignKey(typeof(Staff))]
+        public System.Nullable<int> PEResponsible { get; set; }
 
 
         public System.Nullable<int> Predecessor { get; set; }
 
-
+        [PrimaryKey]
         public int ProjectElementID { get; set; }
 
 
@@ -36,6 +37,10 @@ namespace loom.time.Models
 
 
         public System.Nullable<int> Subsidiary { get; set; }
+
+        [ManyToOne]
+        public Activity Activities { get; set; }
+
     }
 
 }

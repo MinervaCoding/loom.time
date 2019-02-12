@@ -88,7 +88,7 @@ public partial class Country : System.ComponentModel.INotifyPropertyChanging, Sy
 	#region Children
 	[Association(Storage="_subsidiary", OtherKey="Country", ThisKey="CountryID", Name="SUBSIDIARY_COUNTRYSUBSIDIARY")]
 	[DebuggerNonUserCode()]
-	public EntitySet<Subsidiary> Subsidiary
+	internal EntitySet<Subsidiary> Subsidiary
 	{
 		get
 		{
@@ -102,7 +102,7 @@ public partial class Country : System.ComponentModel.INotifyPropertyChanging, Sy
 	
 	[Association(Storage="_projectElement", OtherKey="CountryOfExecution", ThisKey="CountryID", Name="PROJECTELEMENT_COUNTRYPROJECTELEMENT")]
 	[DebuggerNonUserCode()]
-	public EntitySet<ProjectElement> ProjectElement
+	internal EntitySet<ProjectElement> ProjectElement
 	{
 		get
 		{

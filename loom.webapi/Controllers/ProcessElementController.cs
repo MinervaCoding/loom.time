@@ -13,10 +13,10 @@ namespace loom.webapi.Controllers
     {
         static LoomDB _db = new LoomDB(ConfigurationManager.AppSettings["LoomConnectionString"]);
         
-        public IEnumerable<ProcessElement> GetAllProcessElements(long DepartmentID)
+        public IEnumerable<ProcessElement> GetAllProcessElements(long id)
         {
             var processelements = from q in _db.ProcessElement
-                                  where q.Department == DepartmentID
+                                  where q.Department == id
                                   select q;
             if (processelements == null)
             {

@@ -113,7 +113,7 @@ public partial class AbsenceDay : System.ComponentModel.INotifyPropertyChanging,
 	#region Parents
 	[Association(Storage="_staffStaff", OtherKey="StaffID", ThisKey="Staff", Name="ABSENCEDAY_STAFFABSENCEDAY", IsForeignKey=true)]
 	[DebuggerNonUserCode()]
-	public Staff StaffStaff
+	internal Staff StaffStaff
 	{
 		get
 		{

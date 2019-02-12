@@ -352,7 +352,7 @@ public partial class ProjectElement : System.ComponentModel.INotifyPropertyChang
 	#region Children
 	[Association(Storage="_activity", OtherKey="ProjectElement", ThisKey="ProjectElementID", Name="ACTIVITY_PROJECTELEMENTACTIVITY")]
 	[DebuggerNonUserCode()]
-	public EntitySet<Activity> Activity
+	internal EntitySet<Activity> Activity
 	{
 		get
 		{
@@ -366,7 +366,7 @@ public partial class ProjectElement : System.ComponentModel.INotifyPropertyChang
 	
 	[Association(Storage="_referenceQuantity", OtherKey="ProjectElement", ThisKey="ProjectElementID", Name="REFERENCEQUANTITY_PROJECTELEMENTREFERENCEQUANTITY")]
 	[DebuggerNonUserCode()]
-	public EntitySet<ReferenceQuantity> ReferenceQuantity
+	internal EntitySet<ReferenceQuantity> ReferenceQuantity
 	{
 		get
 		{
@@ -382,7 +382,7 @@ public partial class ProjectElement : System.ComponentModel.INotifyPropertyChang
 	#region Parents
 	[Association(Storage="_country", OtherKey="CountryID", ThisKey="CountryOfExecution", Name="PROJECTELEMENT_COUNTRYPROJECTELEMENT", IsForeignKey=true)]
 	[DebuggerNonUserCode()]
-	public Country Country
+	internal Country Country
 	{
 		get
 		{
@@ -415,7 +415,7 @@ public partial class ProjectElement : System.ComponentModel.INotifyPropertyChang
 	
 	[Association(Storage="_projectElementTypeProjectElementType", OtherKey="ProjectElementTypeID", ThisKey="ProjectElementType", Name="PROJECTELEMENT_PROJECTELEMENTTYPEPROJECTELEMENT", IsForeignKey=true)]
 	[DebuggerNonUserCode()]
-	public ProjectElementType ProjectElementTypeProjectElementType
+	internal ProjectElementType ProjectElementTypeProjectElementType
 	{
 		get
 		{
@@ -448,7 +448,7 @@ public partial class ProjectElement : System.ComponentModel.INotifyPropertyChang
 	
 	[Association(Storage="_staff", OtherKey="StaffID", ThisKey="PerEsponsible", Name="PROJECTELEMENT_STAFFPROJECTELEMENT", IsForeignKey=true)]
 	[DebuggerNonUserCode()]
-	public Staff Staff
+	internal Staff Staff
 	{
 		get
 		{
@@ -481,7 +481,7 @@ public partial class ProjectElement : System.ComponentModel.INotifyPropertyChang
 	
 	[Association(Storage="_subsidiarySubsidiary", OtherKey="SubsidiaryID", ThisKey="Subsidiary", Name="PROJECTELEMENT_SUBSIDIARYPROJECTELEMENT", IsForeignKey=true)]
 	[DebuggerNonUserCode()]
-	public Subsidiary SubsidiarySubsidiary
+	internal Subsidiary SubsidiarySubsidiary
 	{
 		get
 		{

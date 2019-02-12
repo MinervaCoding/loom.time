@@ -109,7 +109,7 @@ public partial class PERelation : System.ComponentModel.INotifyPropertyChanging,
 	#region Parents
 	[Association(Storage="_processElement", OtherKey="ProcessElementID", ThisKey="PESuccessor", Name="PROCESSELEMENT_PERELATION_SUCCESSOR", IsForeignKey=true)]
 	[DebuggerNonUserCode()]
-	public ProcessElement ProcessElementSuccessor
+	internal ProcessElement ProcessElementSuccessor
 	{
 		get
 		{
@@ -142,7 +142,7 @@ public partial class PERelation : System.ComponentModel.INotifyPropertyChanging,
 	
 	[Association(Storage="_processElement", OtherKey="ProcessElementID", ThisKey="PEPredecessor", Name="PROCESSELEMENT_PERELATION_PREDECESSOR", IsForeignKey=true)]
 	[DebuggerNonUserCode()]
-	public ProcessElement ProcessElementPredecessor
+	internal ProcessElement ProcessElementPredecessor
 	{
 		get
 		{

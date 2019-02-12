@@ -120,7 +120,7 @@ public partial class QuantityUnitKey : System.ComponentModel.INotifyPropertyChan
 	#region Parents
 	[Association(Storage="_quantityUnitQuantityUnit", OtherKey="QuantityUnitID", ThisKey="QuantityUnit", Name="QUANTITYUNITKEY_QUANTITYUNITQUANTITYUNITKEY", IsForeignKey=true)]
 	[DebuggerNonUserCode()]
-	public QuantityUnit QuantityUnitQuantityUnit
+	internal QuantityUnit QuantityUnitQuantityUnit
 	{
 		get
 		{
@@ -153,7 +153,7 @@ public partial class QuantityUnitKey : System.ComponentModel.INotifyPropertyChan
 	
 	[Association(Storage="_projectElementTypeProjectElementType", OtherKey="ProjectElementTypeID", ThisKey="ProjectElementType", Name="QUANTITYUNITKEY_PROJECTELEMENTTYPEQUANTITYUNITKEY", IsForeignKey=true)]
 	[DebuggerNonUserCode()]
-	public ProjectElementType ProjectElementTypeProjectElementType
+	internal ProjectElementType ProjectElementTypeProjectElementType
 	{
 		get
 		{

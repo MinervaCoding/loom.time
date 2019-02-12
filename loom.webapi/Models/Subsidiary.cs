@@ -117,7 +117,7 @@ public partial class Subsidiary : System.ComponentModel.INotifyPropertyChanging,
 	#region Children
 	[Association(Storage="_projectElement", OtherKey="Subsidiary", ThisKey="SubsidiaryID", Name="PROJECTELEMENT_SUBSIDIARYPROJECTELEMENT")]
 	[DebuggerNonUserCode()]
-	public EntitySet<ProjectElement> ProjectElement
+	internal EntitySet<ProjectElement> ProjectElement
 	{
 		get
 		{
@@ -133,7 +133,7 @@ public partial class Subsidiary : System.ComponentModel.INotifyPropertyChanging,
 	#region Parents
 	[Association(Storage="_countryCountry", OtherKey="CountryID", ThisKey="Country", Name="SUBSIDIARY_COUNTRYSUBSIDIARY", IsForeignKey=true)]
 	[DebuggerNonUserCode()]
-	public Country CountryCountry
+	internal Country CountryCountry
 	{
 		get
 		{

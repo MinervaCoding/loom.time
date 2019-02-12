@@ -192,7 +192,7 @@ public partial class PPL : System.ComponentModel.INotifyPropertyChanging, System
 	#region Children
 	[Association(Storage="_partsListElement", OtherKey="ArtikelID", ThisKey="ArticleID", Name="PARTSLISTELEMENT_PPLPARTSLISTELEMENT")]
 	[DebuggerNonUserCode()]
-	public EntitySet<PartsListElement> PartsListElement
+	internal EntitySet<PartsListElement> PartsListElement
 	{
 		get
 		{

@@ -194,7 +194,7 @@ namespace loom.webapi.models
 		[Association(Storage = "_PERelationPredecessor", OtherKey = "PEPredecessor", ThisKey = "ProcessElementID",
 			Name = "PROCESSELEMENT_PERELATION_PREDECESSOR")]
 		[DebuggerNonUserCode()]
-		public EntitySet<PERelation> PERelationPredecessor
+		internal EntitySet<PERelation> PERelationPredecessor
 		{
 			get { return this._PERelationPredecessor; }
 			set { this._PERelationPredecessor = value; }
@@ -203,7 +203,7 @@ namespace loom.webapi.models
 		[Association(Storage = "_PERelation", OtherKey = "PESuccessor", ThisKey = "ProcessElementID",
 			Name = "PROCESSELEMENT_PERELATION_SUCCESSOR")]
 		[DebuggerNonUserCode()]
-		public EntitySet<PERelation> PERelationSuccessor
+		internal EntitySet<PERelation> PERelationSuccessor
 		{
 			get { return this._PERelationSuccessor; }
 			set { this._PERelationSuccessor = value; }
@@ -212,7 +212,7 @@ namespace loom.webapi.models
 		[Association(Storage = "_activity", OtherKey = "ProcessElement", ThisKey = "ProcessElementID",
 			Name = "ACTIVITY_PROCESSELEMENTACTIVITY")]
 		[DebuggerNonUserCode()]
-		public EntitySet<Activity> Activity
+		internal EntitySet<Activity> Activity
 		{
 			get { return this._activity; }
 			set { this._activity = value; }
@@ -221,7 +221,7 @@ namespace loom.webapi.models
 		[Association(Storage = "_targetTime", OtherKey = "ProcessElement", ThisKey = "ProcessElementID",
 			Name = "TARGETTIME_PROCESSELEMENTTARGETTIME")]
 		[DebuggerNonUserCode()]
-		public EntitySet<TargetTime> TargetTime
+		internal EntitySet<TargetTime> TargetTime
 		{
 			get { return this._targetTime; }
 			set { this._targetTime = value; }
@@ -234,7 +234,7 @@ namespace loom.webapi.models
 		[Association(Storage = "_departmentDepartment", OtherKey = "DepartmentID", ThisKey = "Department",
 			Name = "PROCESSELEMENT_DEPARTMENTPROCESSELEMENT", IsForeignKey = true)]
 		[DebuggerNonUserCode()]
-		public Department DepartmentDepartment
+		internal Department DepartmentDepartment
 		{
 			get { return this._departmentDepartment.Entity; }
 			set
@@ -267,7 +267,7 @@ namespace loom.webapi.models
 			ThisKey = "ProcessElementType", Name = "PROCESSELEMENT_PROCESSELEMENTTYPEPROCESSELEMENT",
 			IsForeignKey = true)]
 		[DebuggerNonUserCode()]
-		public ProcessElementType ProcessElementTypeProcessElementType
+		internal ProcessElementType ProcessElementTypeProcessElementType
 		{
 			get { return this._processElementTypeProcessElementType.Entity; }
 			set
@@ -300,7 +300,7 @@ namespace loom.webapi.models
 		[Association(Storage = "_processPhaseProcessPhase", OtherKey = "ProcessPhaseID", ThisKey = "ProcessPhase",
 			Name = "PROCESSELEMENT_PROCESSPHASEPROCESSELEMENT", IsForeignKey = true)]
 		[DebuggerNonUserCode()]
-		public ProcessPhase ProcessPhaseProcessPhase
+		internal ProcessPhase ProcessPhaseProcessPhase
 		{
 			get { return this._processPhaseProcessPhase.Entity; }
 			set

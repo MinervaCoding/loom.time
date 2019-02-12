@@ -113,7 +113,7 @@ public partial class ErrorCode : System.ComponentModel.INotifyPropertyChanging, 
 	#region Children
 	[Association(Storage="_error", OtherKey="ErrorCode", ThisKey="ErrorCodeID", Name="ERROR_ERRORCODEERROR")]
 	[DebuggerNonUserCode()]
-	public EntitySet<Error> Error
+	internal EntitySet<Error> Error
 	{
 		get
 		{

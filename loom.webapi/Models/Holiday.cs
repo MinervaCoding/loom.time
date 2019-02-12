@@ -114,7 +114,7 @@ public partial class Holyday : System.ComponentModel.INotifyPropertyChanging, Sy
 	#region Parents
 	[Association(Storage="_departmentDepartment", OtherKey="DepartmentID", ThisKey="Department", Name="HOLYDAY_DEPARTMENTHOLYDAY", IsForeignKey=true)]
 	[DebuggerNonUserCode()]
-	public Department DepartmentDepartment
+	internal Department DepartmentDepartment
 	{
 		get
 		{

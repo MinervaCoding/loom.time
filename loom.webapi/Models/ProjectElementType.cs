@@ -88,7 +88,7 @@ public partial class ProjectElementType : System.ComponentModel.INotifyPropertyC
 	#region Children
 	[Association(Storage="_projectElement", OtherKey="ProjectElementType", ThisKey="ProjectElementTypeID", Name="PROJECTELEMENT_PROJECTELEMENTTYPEPROJECTELEMENT")]
 	[DebuggerNonUserCode()]
-	public EntitySet<ProjectElement> ProjectElement
+	internal EntitySet<ProjectElement> ProjectElement
 	{
 		get
 		{
@@ -102,7 +102,7 @@ public partial class ProjectElementType : System.ComponentModel.INotifyPropertyC
 	
 	[Association(Storage="_quantityUnitKey", OtherKey="ProjectElementType", ThisKey="ProjectElementTypeID", Name="QUANTITYUNITKEY_PROJECTELEMENTTYPEQUANTITYUNITKEY")]
 	[DebuggerNonUserCode()]
-	public EntitySet<QuantityUnitKey> QuantityUnitKey
+	internal EntitySet<QuantityUnitKey> QuantityUnitKey
 	{
 		get
 		{

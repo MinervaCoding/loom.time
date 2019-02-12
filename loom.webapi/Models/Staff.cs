@@ -4,10 +4,13 @@ using System.Data;
 using System.Data.Linq;
 using System.Data.Linq.Mapping;
 using System.Diagnostics;
+using System.Web.ApplicationServices;
+using System.Runtime.Serialization;
 
 namespace loom.webapi.models
 {
 [Table(Name="LOOM.Staff")]
+//[KnownTypeAttribute(typeof(Department))]
 public partial class Staff : System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
 {
 	
@@ -236,7 +239,7 @@ public partial class Staff : System.ComponentModel.INotifyPropertyChanging, Syst
 	#region Children
 	[Association(Storage="_performance", OtherKey="Staff", ThisKey="StaffID", Name="PERFORMANCE_STAFFPERFORMANCE")]
 	[DebuggerNonUserCode()]
-	public EntitySet<Performance> Performance
+	internal EntitySet<Performance> Performance
 	{
 		get
 		{
@@ -250,7 +253,7 @@ public partial class Staff : System.ComponentModel.INotifyPropertyChanging, Syst
 	
 	[Association(Storage="_resourceAllocation", OtherKey="Staff", ThisKey="StaffID", Name="RESOURCEALLOCATION_STAFFRESOURCEALLOCATION")]
 	[DebuggerNonUserCode()]
-	public EntitySet<ResourceAllocation> ResourceAllocation
+	internal EntitySet<ResourceAllocation> ResourceAllocation
 	{
 		get
 		{
@@ -264,7 +267,7 @@ public partial class Staff : System.ComponentModel.INotifyPropertyChanging, Syst
 	
 	[Association(Storage="_absenceDay", OtherKey="Staff", ThisKey="StaffID", Name="ABSENCEDAY_STAFFABSENCEDAY")]
 	[DebuggerNonUserCode()]
-	public EntitySet<AbsenceDay> AbsenceDay
+	internal EntitySet<AbsenceDay> AbsenceDay
 	{
 		get
 		{
@@ -278,7 +281,7 @@ public partial class Staff : System.ComponentModel.INotifyPropertyChanging, Syst
 	
 	[Association(Storage="_projectElement", OtherKey="PerEsponsible", ThisKey="StaffID", Name="PROJECTELEMENT_STAFFPROJECTELEMENT")]
 	[DebuggerNonUserCode()]
-	public EntitySet<ProjectElement> ProjectElement
+	internal EntitySet<ProjectElement> ProjectElement
 	{
 		get
 		{
@@ -294,7 +297,7 @@ public partial class Staff : System.ComponentModel.INotifyPropertyChanging, Syst
 	#region Parents
 	[Association(Storage="_departmentDepartment", OtherKey="DepartmentID", ThisKey="Department", Name="STAFF_DEPARTMENTSTAFF", IsForeignKey=true)]
 	[DebuggerNonUserCode()]
-	public Department DepartmentDepartment
+	internal Department DepartmentDepartment
 	{
 		get
 		{

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="loom.time.Views.Date"  
+             Icon="date.png"
+             Title="Date">
+    
+           
+    <RelativeLayout Padding="0">   
+             
+            
+        <Image Aspect="AspectFill"
+               Source="background.jpg"
+               RelativeLayout.WidthConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+               RelativeLayout.HeightConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Height}">
+        </Image>
+        
+            <FlexLayout 
+                Direction="Column"
+                AlignItems="Center"
+                JustifyContent="Start">
+       
+            <DatePicker 
+                FontFamily="Verdana"
+                FontSize="Large"
+                HorizontalOptions="Center"
+                VerticalOptions="Start"
+                Margin="0,30,0,0"/>
+            
+           </FlexLayout>
+        
+        </RelativeLayout>
+    
+</ContentPage>

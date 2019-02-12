@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="loom.time.Views.LoginPage" 
+             Title="Login">
+    
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Text="Sign Up" 
+                     Clicked="OnSignUpButtonClicked" />
+	</ContentPage.ToolbarItems>
+    
+    <RelativeLayout Padding="0">   
+             
+            
+        <Image Aspect="AspectFill"
+               Source="background.jpg"
+               RelativeLayout.WidthConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+               RelativeLayout.HeightConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Height}">
+        </Image>
+        
+		<FlexLayout Direction="Column"
+                    AlignItems="Center"
+                    JustifyContent="Start">    
+            
+            <Entry x:Name="EntryStaff"
+                   Placeholder="Enter Staff Number"
+                   FontFamily="Verdana"
+                   WidthRequest="250"
+                   HeightRequest="50"
+                   Keyboard="Numeric"
+                   MaxLength="4"
+                   FontSize="Large"
+                   Margin="0,50,0,0"
+                   HorizontalTextAlignment="Center"/>
+            
+            <Button x:Name="LoginButton"
+                    Text="Login"
+                    Font="Verdana"
+                    TextColor="Black"
+                    WidthRequest="250"
+                    HeightRequest="50"
+                    FontSize="Large"
+                    Margin="0,20,0,0"
+                    BackgroundColor="White"
+                    BorderColor="#b2b2b2"
+                    BorderWidth="1"
+                    Pressed="OnLoginButtonClicked"/>
+            
+            <Label x:Name="StaffName"
+                   Text=""
+                   Font="Verdana"
+                   HorizontalTextAlignment="Center"
+                   BackgroundColor="White"
+                   VerticalTextAlignment="Center"
+                   FontSize="Large"
+                   IsVisible="false"
+                   Margin="0,20,0,0"
+                   WidthRequest="250"
+               HeightRequest="50"/>
+            
+            
+		</FlexLayout>
+	</RelativeLayout>
+    
+</ContentPage>

@@ -193,7 +193,7 @@ public partial class Staff : System.ComponentModel.INotifyPropertyChanging, Syst
 		}
 	}
 	
-	[Column(Storage="_staffID", Name="StaffID", DbType="int", IsPrimaryKey=true, IsDbGenerated=true, AutoSync=AutoSync.Never, CanBeNull=false)]
+	[Column(Storage="_staffID", Name="StaffID", DbType="int", IsPrimaryKey=true, IsDbGenerated=true, AutoSync=AutoSync.OnInsert, CanBeNull=false)]
 	[DebuggerNonUserCode()]
 	public int StaffID
 	{

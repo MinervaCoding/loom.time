@@ -9,7 +9,7 @@ using System.Configuration;
 
 namespace loom.webapi.Controllers
 {
-    public class ProjecElementController : ApiController
+    public class ActiveProjectElementController : ApiController
     {
         static LoomDB _db = new LoomDB(ConfigurationManager.AppSettings["LoomConnectionString"]);
 

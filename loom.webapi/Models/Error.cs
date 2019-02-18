@@ -136,7 +136,7 @@ public partial class Error : System.ComponentModel.INotifyPropertyChanging, Syst
 		}
 	}
 	
-	[Column(Storage="_errorID", Name="ErrorID", DbType="int", IsPrimaryKey=true, IsDbGenerated=true, AutoSync=AutoSync.Never, CanBeNull=false)]
+	[Column(Storage="_errorID", Name="ErrorID", DbType="int", IsPrimaryKey=true, IsDbGenerated=true, AutoSync=AutoSync.OnInsert, CanBeNull=false)]
 	[DebuggerNonUserCode()]
 	public int ErrorID
 	{

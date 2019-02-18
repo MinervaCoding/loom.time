@@ -96,7 +96,7 @@ public partial class QuantityUnitKey : System.ComponentModel.INotifyPropertyChan
 		}
 	}
 	
-	[Column(Storage="_quantityUnitKeyID", Name="QuantityUnitKeyID", DbType="int", IsPrimaryKey=true, IsDbGenerated=true, AutoSync=AutoSync.Never, CanBeNull=false)]
+	[Column(Storage="_quantityUnitKeyID", Name="QuantityUnitKeyID", DbType="int", IsPrimaryKey=true, IsDbGenerated=true, AutoSync=AutoSync.OnInsert, CanBeNull=false)]
 	[DebuggerNonUserCode()]
 	public int QuantityUnitKeyID
 	{

@@ -90,7 +90,7 @@ public partial class Holyday : System.ComponentModel.INotifyPropertyChanging, Sy
 		}
 	}
 	
-	[Column(Storage="_holydayID", Name="HolydayID", DbType="int", IsPrimaryKey=true, IsDbGenerated=true, AutoSync=AutoSync.Never, CanBeNull=false)]
+	[Column(Storage="_holydayID", Name="HolydayID", DbType="int", IsPrimaryKey=true, IsDbGenerated=true, AutoSync=AutoSync.OnInsert, CanBeNull=false)]
 	[DebuggerNonUserCode()]
 	public int HolydayID
 	{

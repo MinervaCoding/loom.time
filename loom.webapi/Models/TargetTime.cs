@@ -114,7 +114,7 @@ public partial class TargetTime : System.ComponentModel.INotifyPropertyChanging,
 		}
 	}
 	
-	[Column(Storage="_targetTimeID", Name="TargetTimeID", DbType="int", IsPrimaryKey=true, IsDbGenerated=true, AutoSync=AutoSync.Never, CanBeNull=false)]
+	[Column(Storage="_targetTimeID", Name="TargetTimeID", DbType="int", IsPrimaryKey=true, IsDbGenerated=true, AutoSync=AutoSync.OnInsert, CanBeNull=false)]
 	[DebuggerNonUserCode()]
 	public int TargetTimeID
 	{

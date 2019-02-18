@@ -93,7 +93,7 @@ public partial class Subsidiary : System.ComponentModel.INotifyPropertyChanging,
 		}
 	}
 	
-	[Column(Storage="_subsidiaryID", Name="SubsidiaryID", DbType="int", IsPrimaryKey=true, IsDbGenerated=true, AutoSync=AutoSync.Never, CanBeNull=false)]
+	[Column(Storage="_subsidiaryID", Name="SubsidiaryID", DbType="int", IsPrimaryKey=true, IsDbGenerated=true, AutoSync=AutoSync.OnInsert, CanBeNull=false)]
 	[DebuggerNonUserCode()]
 	public int SubsidiaryID
 	{

@@ -73,7 +73,7 @@ public partial class QuantityUnit : System.ComponentModel.INotifyPropertyChangin
 		}
 	}
 	
-	[Column(Storage="_quantityUnitID", Name="QuantityUnitID", DbType="int", IsPrimaryKey=true, IsDbGenerated=true, AutoSync=AutoSync.Never, CanBeNull=false)]
+	[Column(Storage="_quantityUnitID", Name="QuantityUnitID", DbType="int", IsPrimaryKey=true, IsDbGenerated=true, AutoSync=AutoSync.OnInsert, CanBeNull=false)]
 	[DebuggerNonUserCode()]
 	public int QuantityUnitID
 	{

@@ -87,7 +87,7 @@ public partial class ProcessElementType : System.ComponentModel.INotifyPropertyC
 		}
 	}
 	
-	[Column(Storage="_processElementTypeID", Name="ProcessElementTypeID", DbType="int", IsPrimaryKey=true, IsDbGenerated=true, AutoSync=AutoSync.Never, CanBeNull=false)]
+	[Column(Storage="_processElementTypeID", Name="ProcessElementTypeID", DbType="int", IsPrimaryKey=true, IsDbGenerated=true, AutoSync=AutoSync.OnInsert, CanBeNull=false)]
 	[DebuggerNonUserCode()]
 	public int ProcessElementTypeID
 	{

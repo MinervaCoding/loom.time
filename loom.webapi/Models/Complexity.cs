@@ -39,7 +39,7 @@ public partial class Complexity : System.ComponentModel.INotifyPropertyChanging,
 		this.OnCreated();
 	}
 	
-	[Column(Storage="_complexityAbc", Name="ComplexityABC", DbType="varchar", IsPrimaryKey=true, AutoSync=AutoSync.Never, CanBeNull=false)]
+	[Column(Storage="_complexityAbc", Name="ComplexityABC", DbType="varchar", IsPrimaryKey=true, AutoSync=AutoSync.OnInsert, CanBeNull=false)]
 	[DebuggerNonUserCode()]
 	public string ComplexityAbc
 	{

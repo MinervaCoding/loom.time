@@ -96,7 +96,7 @@ public partial class Activity : System.ComponentModel.INotifyPropertyChanging, S
 		this.OnCreated();
 	}
 	
-	[Column(Storage="_activityID", Name="ActivityID", DbType="int", IsPrimaryKey=true, IsDbGenerated=true, AutoSync=AutoSync.Never, CanBeNull=false)]
+	[Column(Storage="_activityID", Name="ActivityID", DbType="int", IsPrimaryKey=true, IsDbGenerated=true, AutoSync=AutoSync.OnInsert, CanBeNull=false)]
 	[DebuggerNonUserCode()]
 	public int ActivityID
 	{

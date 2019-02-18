@@ -257,7 +257,7 @@ public partial class ProjectElement : System.ComponentModel.INotifyPropertyChang
 		}
 	}
 	
-	[Column(Storage="_projectElementID", Name="ProjectElementID", DbType="int", IsPrimaryKey=true, IsDbGenerated=true, AutoSync=AutoSync.Never, CanBeNull=false)]
+	[Column(Storage="_projectElementID", Name="ProjectElementID", DbType="int", IsPrimaryKey=true, IsDbGenerated=true, AutoSync=AutoSync.OnInsert, CanBeNull=false)]
 	[DebuggerNonUserCode()]
 	public int ProjectElementID
 	{

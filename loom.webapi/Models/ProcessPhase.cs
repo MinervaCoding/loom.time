@@ -62,7 +62,7 @@ public partial class ProcessPhase : System.ComponentModel.INotifyPropertyChangin
 		}
 	}
 	
-	[Column(Storage="_processPhaseID", Name="ProcessPhaseID", DbType="int", IsPrimaryKey=true, IsDbGenerated=true, AutoSync=AutoSync.Never, CanBeNull=false)]
+	[Column(Storage="_processPhaseID", Name="ProcessPhaseID", DbType="int", IsPrimaryKey=true, IsDbGenerated=true, AutoSync=AutoSync.OnInsert, CanBeNull=false)]
 	[DebuggerNonUserCode()]
 	public int ProcessPhaseID
 	{

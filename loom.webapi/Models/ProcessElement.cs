@@ -124,7 +124,7 @@ namespace loom.webapi.models
 		}
 
 		[Column(Storage = "_processElementID", Name = "ProcessElementID", DbType = "int", IsPrimaryKey = true,
-			IsDbGenerated = true, AutoSync = AutoSync.Never, CanBeNull = false)]
+			IsDbGenerated = true, AutoSync = AutoSync.OnInsert, CanBeNull = false)]
 		[DebuggerNonUserCode()]
 		public int ProcessElementID
 		{
@@ -200,7 +200,7 @@ namespace loom.webapi.models
 			set { this._PERelationPredecessor = value; }
 		}
 		
-		[Association(Storage = "_PERelation", OtherKey = "PESuccessor", ThisKey = "ProcessElementID",
+		[Association(Storage = "_PERelationSuccessor", OtherKey = "PESuccessor", ThisKey = "ProcessElementID",
 			Name = "PROCESSELEMENT_PERELATION_SUCCESSOR")]
 		[DebuggerNonUserCode()]
 		internal EntitySet<PERelation> PERelationSuccessor

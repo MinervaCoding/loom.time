@@ -42,7 +42,7 @@ public partial class Country : System.ComponentModel.INotifyPropertyChanging, Sy
 		this.OnCreated();
 	}
 	
-	[Column(Storage="_countryID", Name="CountryID", DbType="int", IsPrimaryKey=true, IsDbGenerated=true, AutoSync=AutoSync.Never, CanBeNull=false)]
+	[Column(Storage="_countryID", Name="CountryID", DbType="int", IsPrimaryKey=true, IsDbGenerated=true, AutoSync=AutoSync.OnInsert, CanBeNull=false)]
 	[DebuggerNonUserCode()]
 	public int CountryID
 	{

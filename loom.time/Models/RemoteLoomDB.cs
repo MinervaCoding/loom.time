@@ -19,7 +19,7 @@ namespace loom.time.Models
             // return URI of the created resource.
             return response.Headers.Location;
         }
-        */
+        
         static async Task<Staff> GetStaffAsync(long staffid)
         {
             Staff staff = null;
@@ -33,7 +33,7 @@ namespace loom.time.Models
         }
         
         
-        /*
+        
          * // No final slash
 var baseUri = new Uri("https://localhost:44302/AndonService.svc");
 var uri = new Uri(baseUri, "Layouts/1100-00277");
@@ -120,6 +120,6 @@ Console.WriteLine(uri);
             Console.ReadLine();
 
         }
-        */
+
     }
 }

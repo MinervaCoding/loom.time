@@ -122,7 +122,7 @@ public partial class ReferenceQuantity : System.ComponentModel.INotifyPropertyCh
 		}
 	}
 	
-	[Column(Storage="_referenceQuantityID", Name="ReferenceQuantityID", DbType="int", IsPrimaryKey=true, IsDbGenerated=true, AutoSync=AutoSync.Never, CanBeNull=false)]
+	[Column(Storage="_referenceQuantityID", Name="ReferenceQuantityID", DbType="int", IsPrimaryKey=true, IsDbGenerated=true, AutoSync=AutoSync.OnInsert, CanBeNull=false)]
 	[DebuggerNonUserCode()]
 	public int ReferenceQuantityID
 	{

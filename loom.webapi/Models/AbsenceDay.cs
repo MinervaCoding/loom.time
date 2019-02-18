@@ -43,7 +43,7 @@ public partial class AbsenceDay : System.ComponentModel.INotifyPropertyChanging,
 		this.OnCreated();
 	}
 	
-	[Column(Storage="_absenceDayID", Name="AbsenceDayID", DbType="int", IsPrimaryKey=true, IsDbGenerated=true, AutoSync=AutoSync.Never, CanBeNull=false)]
+	[Column(Storage="_absenceDayID", Name="AbsenceDayID", DbType="int", IsPrimaryKey=true, IsDbGenerated=true, AutoSync=AutoSync.OnInsert, CanBeNull=false)]
 	[DebuggerNonUserCode()]
 	public int AbsenceDayID
 	{

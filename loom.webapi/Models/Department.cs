@@ -73,7 +73,7 @@ public partial class Department : System.ComponentModel.INotifyPropertyChanging,
 		}
 	}
 	
-	[Column(Storage="_departmentID", Name="DepartmentID", DbType="int", IsPrimaryKey=true, IsDbGenerated=true, AutoSync=AutoSync.Never, CanBeNull=false)]
+	[Column(Storage="_departmentID", Name="DepartmentID", DbType="int", IsPrimaryKey=true, IsDbGenerated=true, AutoSync=AutoSync.OnInsert, CanBeNull=false)]
 	[DebuggerNonUserCode()]
 	public int DepartmentID
 	{
